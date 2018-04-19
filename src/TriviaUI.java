@@ -13,5 +13,8 @@ import javax.swing.JFrame;
  */
 public class TriviaUI extends JFrame {
     
-    TrviaUI
+    public TriviaUI(){
+        
+    }
+    
 }
