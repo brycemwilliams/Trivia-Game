@@ -9,34 +9,103 @@ public class QuestionLists {
     private ArrayList<QandA> sports; 
     private ArrayList<QandA> food; 
     
-//    public void addPopCulture(String question, String answer)
-//    {
-//        return popCulture.add(new QandA(question, answer));
-//    }
-    
     
     public void QuestionLists(){
-        //animal list
-        QandA a1 = new QandA("Lemurs are native to only what Country?", "Madagascar"); animals.add(a1);
-        QandA a2 = new QandA("How many legs does a spider have?", "8"); animals.add(a2);
-        QandA a3 = new QandA("Canis lupus familaris is the scientific name for which common animal", "Dog"); animals.add(a3);
+        //animal category
+        QandA a1 = new QandA("Lemurs are native to only what Country?", "Madagascar"); getAnimals().add(a1);
+        QandA a2 = new QandA("How many legs does a spider have?", "8"); getAnimals().add(a2);
+        QandA a3 = new QandA("Canis lupus familaris is the scientific name for which common animal", "Dog"); getAnimals().add(a3);
         
-        QandA f1 = new QandA("What US state is famous for their juicy peaches?","Georgia"); food.add(f1);
-        QandA f2 = new QandA("What is sushi traditionally wrapped in?", "Seaweed" ); food.add(f2);
-        QandA f3 = new QandA("What popular beverage once contained cocaine?", "Coca-Cola"); food.add(f3); 
+        //food category
+        QandA f1 = new QandA("What US state is famous for their juicy peaches?","Georgia"); getFood().add(f1);
+        QandA f2 = new QandA("What is sushi traditionally wrapped in?", "Seaweed" ); getFood().add(f2);
+        QandA f3 = new QandA("What popular beverage once contained cocaine?", "Coca-Cola"); getFood().add(f3); 
         
-        QandA t1 = new QandA("When did the Apple iPHone first become available", "2007"); technology.add(t1); 
-        QandA t2 = new QandA("What does ROM stand for?", "Read Only Memory"); technology.add(t2); 
-        QandA t3 = new QandA("What does IBM stand for?", "International Business Machines"); technology.add(t3); 
+        //technology category
+        QandA t1 = new QandA("When did the Apple iPHone first become available", "2007"); getTechnology().add(t1); 
+        QandA t2 = new QandA("What does ROM stand for?", "Read Only Memory"); getTechnology().add(t2); 
+        QandA t3 = new QandA("What does IBM stand for?", "International Business Machines"); getTechnology().add(t3); 
         
-        QandA n1 = new QandA("What is the name of the largest ocean on earth?", "Pacific Ocean"); nature.add(n1); 
-        QandA n2 = new QandA("Which is hotter, the center of the earth or surface of the sun?", "Center of the Earth"); nature.add(n2);
-        QandA n3 = new QandA("What is the name of the highest mountain on earth?", "Mt. Everest"); nature.add(n3); 
+        //nature category
+        QandA n1 = new QandA("What is the name of the largest ocean on earth?", "Pacific Ocean"); getNature().add(n1); 
+        QandA n2 = new QandA("Which is hotter, the center of the earth or surface of the sun?", "Center of the Earth"); getNature().add(n2);
+        QandA n3 = new QandA("What is the name of the highest mountain on earth?", "Mt. Everest"); getNature().add(n3); 
         
-        QandA s1= new QandA("How many holes are there in a full round of golf?", "18"); sports.add(s1); 
-        QandA s2 = new QandA("Who is the only athlete ever to play in a Super Bowl and a World Series?", "Deion Sanders"); sports.add(s2); 
-        QandA s3 = new QandA("What is the regulation height for a basketball hoop?", "10 feet"); sports.add(s3); 
+        //sports category
+        QandA s1= new QandA("How many holes are there in a full round of golf?", "18"); getSports().add(s1); 
+        QandA s2 = new QandA("Who is the only athlete ever to play in a Super Bowl and a World Series?", "Deion Sanders"); getSports().add(s2); 
+        QandA s3 = new QandA("What is the regulation height for a basketball hoop?", "10 feet"); getSports().add(s3); 
         //
+    }
+
+    /**
+     * @return the animals
+     */
+    public ArrayList<QandA> getAnimals() {
+        return animals;
+    }
+
+    /**
+     * @param animals the animals to set
+     */
+    public void setAnimals(ArrayList<QandA> animals) {
+        this.animals = animals;
+    }
+
+    /**
+     * @return the technology
+     */
+    public ArrayList<QandA> getTechnology() {
+        return technology;
+    }
+
+    /**
+     * @param technology the technology to set
+     */
+    public void setTechnology(ArrayList<QandA> technology) {
+        this.technology = technology;
+    }
+
+    /**
+     * @return the nature
+     */
+    public ArrayList<QandA> getNature() {
+        return nature;
+    }
+
+    /**
+     * @param nature the nature to set
+     */
+    public void setNature(ArrayList<QandA> nature) {
+        this.nature = nature;
+    }
+
+    /**
+     * @return the sports
+     */
+    public ArrayList<QandA> getSports() {
+        return sports;
+    }
+
+    /**
+     * @param sports the sports to set
+     */
+    public void setSports(ArrayList<QandA> sports) {
+        this.sports = sports;
+    }
+
+    /**
+     * @return the food
+     */
+    public ArrayList<QandA> getFood() {
+        return food;
+    }
+
+    /**
+     * @param food the food to set
+     */
+    public void setFood(ArrayList<QandA> food) {
+        this.food = food;
     }
 
 }
