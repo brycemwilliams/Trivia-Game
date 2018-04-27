@@ -1,4 +1,3 @@
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -24,7 +23,6 @@ public class Controller {
         theTriviaUI.setVisible(true);
         
         buttonListeners();
-        
 
         
     }
@@ -34,15 +32,15 @@ public class Controller {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String userAnswer = theTriviaUI.getInputBar().getText();
-                System.out.println(ql.getRandomQuestion().toString());
+                QandA question = ql.getRandomQuestion();
                 
+                System.out.println(question.toString());
+                //Testing button and random question method works
+                
+                theTriviaUI.getAnswerBar().setText(question.getQuestion());
             }
 
         });
-        
-    }
-    
-    public void questionPrompt(){
         
     }
     

@@ -47,7 +47,7 @@ public class TriviaUI extends JFrame {
         setSubmitButton(new JButton("Submit!!"));
         
         setInputBar(new JTextField("Input Answer Here"));
-        answerBar = new JTextField(ql.getRandomQuestion().getQuestion());
+        setAnswerBar(new JTextField(ql.getRandomQuestion().getQuestion()));
         
         
         getCategoriesPanel().setLayout(new FlowLayout());
@@ -64,7 +64,7 @@ public class TriviaUI extends JFrame {
         
         setContentPane(new JPanel(new BorderLayout()));
         getContentPane().add(getQuestionPanel(), BorderLayout.NORTH);
-        getContentPane().add(answerBar, BorderLayout.CENTER);
+        getContentPane().add(getAnswerBar(), BorderLayout.CENTER);
         getContentPane().add(getCategoriesPanel(), BorderLayout.SOUTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         
@@ -212,6 +212,20 @@ public class TriviaUI extends JFrame {
      */
     public void setSubmitButton(JButton submitButton) {
         this.submitButton = submitButton;
+    }
+
+    /**
+     * @return the answerBar
+     */
+    public JTextField getAnswerBar() {
+        return answerBar;
+    }
+
+    /**
+     * @param answerBar the answerBar to set
+     */
+    public void setAnswerBar(JTextField answerBar) {
+        this.answerBar = answerBar;
     }
     
 }
