@@ -15,13 +15,18 @@ import java.awt.event.ActionListener;
 public class Controller {
     private TriviaUI theTriviaUI;
     private QuestionPrompt qp;
+    private QuestionLists ql;
     
     public Controller(){
         qp = new QuestionPrompt();
+        ql = new QuestionLists();
+        
         theTriviaUI = new TriviaUI();
         theTriviaUI.setVisible(true);
         
         buttonListeners();
+        
+
         
     }
     
@@ -30,6 +35,7 @@ public class Controller {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String userAnswer = theTriviaUI.getInputBar().getText();
+                System.out.println(ql.getRandomQuestion().toString());
                 
             }
 
@@ -38,7 +44,10 @@ public class Controller {
     }
     
     public void questionPrompt(){
-        
+        while(qp.isGameWon() == false){
+            
+            
+        }
     }
     
     

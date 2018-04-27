@@ -1,39 +1,19 @@
 
 public class QuestionPrompt {
-    private String userResponse = "";
     private QuestionLists ql;
+    private boolean gameWon ;
     
     QuestionPrompt(){
+        gameWon = false;
+        
         ql = new QuestionLists();
         
 
     }
     
-    public void ongoingPrompt(){
-        while(getUserResponse() != "done") {
-            QandA q1 = new QandA("What does ROM stand for?", "read only memory");
-            System.out.println(q1.getQuestion());
-            
+    public void ongoingPrompt(String userResponse){
         
-            if(q1.isAnswerCorrect(getUserResponse())){
-                System.out.println("Right answer!");
-                break;
-            }
-        }
-    }
-
-    /**
-     * @return the userResponse
-     */
-    public String getUserResponse() {
-        return userResponse;
-    }
-
-    /**
-     * @param userResponse the userResponse to set
-     */
-    public void setUserResponse(String userResponse) {
-        this.userResponse = userResponse;
+        
     }
 
     /**
@@ -48,6 +28,20 @@ public class QuestionPrompt {
      */
     public void setQl(QuestionLists ql) {
         this.ql = ql;
+    }
+
+    /**
+     * @return the gameWon
+     */
+    public boolean isGameWon() {
+        return gameWon;
+    }
+
+    /**
+     * @param gameWon the gameWon to set
+     */
+    public void setGameWon(boolean gameWon) {
+        this.gameWon = gameWon;
     }
     
     

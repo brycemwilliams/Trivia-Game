@@ -33,7 +33,7 @@ public class QandA {
 
     @Override
     public String toString() {
-        return "QandA{" + "question=" + question + ", answer=" + answer + '}';
+        return "QandA{" + "question=" + question + ", answer=" + answer + "}";
     }
     
 }
