@@ -21,9 +21,13 @@ public class TriviaUI extends JFrame {
      private JPanel categoriesPanel;
      private JButton food, popCulture, technology, nature, music, sports; 
      private JTextField inputBar;
+     private JTextField answerBar;
      private JButton submitButton;
+     private QuestionLists ql;
     
-     public TriviaUI(){
+     public TriviaUI(QuestionLists newQL){
+        ql = newQL;
+         
         viewComponents();
         
     }
@@ -43,7 +47,7 @@ public class TriviaUI extends JFrame {
         setSubmitButton(new JButton("Submit!!"));
         
         setInputBar(new JTextField("Input Answer Here"));
-        
+        answerBar = new JTextField(ql.getRandomQuestion().getQuestion());
         
         
         getCategoriesPanel().setLayout(new FlowLayout());
@@ -60,6 +64,7 @@ public class TriviaUI extends JFrame {
         
         setContentPane(new JPanel(new BorderLayout()));
         getContentPane().add(getQuestionPanel(), BorderLayout.NORTH);
+        getContentPane().add(answerBar, BorderLayout.CENTER);
         getContentPane().add(getCategoriesPanel(), BorderLayout.SOUTH);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         

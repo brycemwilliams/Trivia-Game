@@ -12,16 +12,15 @@ import java.awt.event.ActionListener;
  *
  * @author bryce
  */
+
 public class Controller {
     private TriviaUI theTriviaUI;
-    private QuestionPrompt qp;
     private QuestionLists ql;
     
     public Controller(){
-        qp = new QuestionPrompt();
         ql = new QuestionLists();
         
-        theTriviaUI = new TriviaUI();
+        theTriviaUI = new TriviaUI(ql);
         theTriviaUI.setVisible(true);
         
         buttonListeners();
@@ -44,10 +43,7 @@ public class Controller {
     }
     
     public void questionPrompt(){
-        while(qp.isGameWon() == false){
-            
-            
-        }
+        
     }
     
     

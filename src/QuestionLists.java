@@ -11,7 +11,7 @@ public class QuestionLists {
     private ArrayList<ArrayList<QandA>> bigList;
     
     
-    public void QuestionLists(){
+    public QuestionLists(){
         bigList = new ArrayList<ArrayList<QandA>>();
         
         //animal category
@@ -53,9 +53,11 @@ public class QuestionLists {
     
     public QandA getRandomQuestion(){
         Random rand = new Random();
-        int randNum = (int) (Math.random()*2) + 0;
+        int randNum1 = (int) (Math.random()*3) + 0;
+        int randNum2 = (int) (Math.random()*3) + 0;
         
-        return bigList.get(randNum).get(randNum);
+        return bigList.get(randNum1).get(randNum2);
+        //return technology.get(1);
     }
 
     /**
